@@ -1,9 +1,11 @@
-import Banner from './componentes/banner/Banner.js';
+import Banner from './componentes/banner';
+import Formulario from './componentes/banner/Formulario';
 
 function App() {
   return (
     <div className="App">
       <Banner />
+      <Formulario />
     </div>
   );
 }
