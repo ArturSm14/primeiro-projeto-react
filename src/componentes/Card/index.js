@@ -1,14 +1,17 @@
+import { IoIosCloseCircle } from "react-icons/io";
 import './Card.css'
 
-const Card = (props) => {
+const Card = ({ colaborador, corDeFundo, aoDeletar}) => {
+  console.log(colaborador)
   return (
     <div className="card">
-        <div className="cabecalho" style={{ backgroundColor: props.corPrimaria}}>
-            <img src={props.imagem} alt={props.nome}/>
+        <IoIosCloseCircle size={25} className='deletar'onClick={aoDeletar} /> 
+        <div className="cabecalho" style={{ backgroundColor: corDeFundo}}>
+            <img src={colaborador.imagem} alt={colaborador.nome}/>
         </div>
         <div className="rodape">
-            <h4>{props.nome}</h4>
-            <h5>{props.cargo}</h5>
+            <h4>{colaborador.nome}</h4>
+            <h5>{colaborador.cargo}</h5>
         </div>
     </div>
   )

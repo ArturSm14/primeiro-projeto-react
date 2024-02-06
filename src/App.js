@@ -51,6 +51,10 @@ function App() {
     setColaboradores([...colaboradores, colaborador])
   }
 
+  function deletarColaborador(){
+    console.log('deletando colaborador')
+  }
+
   return (
     <div className="App">
       <Banner />
@@ -58,10 +62,9 @@ function App() {
       {times.map(time => 
           <Time 
             key={time.nome} 
-            nome={time.nome} 
-            corPrimaria={time.corPrimaria}
-            corSecundaria={time.corSecundaria}
+            time={time}
             colaboradores= {colaboradores.filter(colaborador => colaborador.time === time.nome)}
+            aoDeletar={deletarColaborador}
           />)
       }
     </div>
